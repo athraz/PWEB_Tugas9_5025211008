@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2023 at 12:15 PM
+-- Generation Time: May 21, 2023 at 12:34 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,7 +31,7 @@ CREATE TABLE `books` (
   `id` varchar(64) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` longtext NOT NULL,
-  `cover` varchar(64) NOT NULL
+  `cover` varchar(64) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
