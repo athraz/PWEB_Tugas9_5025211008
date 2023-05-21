@@ -13,6 +13,9 @@ if (isset($_POST['edit'])) {
         exit;
     }
 
+    $title = mysqli_real_escape_string($conn, $title);
+    $description = mysqli_real_escape_string($conn, $description);
+
     if (!empty($_FILES['cover']['size'])) {
         $filenameQuery = mysqli_query($conn, "SELECT cover FROM books WHERE id = '$bookId'");
         $filenameRow = mysqli_fetch_assoc($filenameQuery);
